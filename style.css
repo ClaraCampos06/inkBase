@@ -89,7 +89,7 @@ img{
 header{
     background:
         linear-gradient(var(--escurecer), var(--escurecer)),
-        url(img/media2.jpg) center / cover no-repeat;
+        url(img/media2.webp) center / cover no-repeat;
 }
 
 .foto{
@@ -161,7 +161,7 @@ header{
     display: flex;
     background:
         linear-gradient(var(--escurecer), var(--escurecer)),
-        url(img/media1.jpg) center / cover no-repeat;
+        url(img/media1.webp) center / cover no-repeat;
 }
 
 .bloco{
@@ -281,13 +281,20 @@ header{
     color: var(--bege);
 }
 
-/* ---------- 7. TABLET E COMPUTADOR ---------- */
+/* ---------- 6b. CARD ATIVO ---------- */
+/* o inkBudget é o único que já funciona: ganha um destaque discreto */
+.inkBudget{
+    border-color: var(--bege);
+    background: rgba(216, 204, 184, .05);
+}
+
+/* ---------- 7. TABLET (a partir de 600px) ---------- */
 @media (min-width: 600px){
 
     header{
         background:
             linear-gradient(var(--escurecer), var(--escurecer)),
-            url(img/pintura.jpg) center / cover no-repeat;
+            url(img/pintura.webp) center / cover no-repeat;
     }
 
     .foto{
@@ -310,24 +317,39 @@ header{
     .foto2{
         background:
             linear-gradient(var(--escurecer), var(--escurecer)),
-            url(img/back.jpg) center / cover no-repeat;
+            url(img/back.webp) center / cover no-repeat;
     }
 
-    /* grade provisória: o arranjo assimétrico vem na Aula 4 */
     .bloco{
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-flow: dense;
         gap: var(--e-3);
         padding: var(--e-5) var(--e-3);
-    }
-
-    .inkBudget{
-        grid-column: 1 / -1;
     }
 
     .ink{
         min-height: 13rem;
     }
+
+    .inkDrop   { grid-column: 1;      grid-row: 1; }
+    .inkLab    { grid-column: 2;      grid-row: 1; }
+    .inkBudget { grid-column: 1 / -1; grid-row: 2; }
+    .inkTalk   { grid-column: 1;      grid-row: 3; }
+    .inkSkin   { grid-column: 2;      grid-row: 3; }
+}
+
+/* ---------- 7b. COMPUTADOR (a partir de 900px) ---------- */
+@media (min-width: 900px){
+
+    .bloco{
+        max-width: 72rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .inkDrop   { grid-column: 1 / 8;  grid-row: 1; min-height: 15rem; }
+    .inkLab    { grid-column: 8 / 13; grid-row: 1; min-height: 15rem; }
+    .inkTalk   { grid-column: 1 / 5;  grid-row: 2; min-height: 14rem; }
+    .inkBudget { grid-column: 5 / 13; grid-row: 2; min-height: 14rem; }
+    .inkSkin   { grid-column: 1 / 13; grid-row: 3; min-height: 9rem; }
 }
 
 /* ---------- 8. QUEM PREFERE MENOS MOVIMENTO ---------- */
