@@ -14,6 +14,7 @@
     --media: "Average Sans", sans-serif;
     --redonda: "Noto Sans JP", sans-serif;
 }
+
 *{
     font-family: var(--redonda);
     font-weight: lighter;
@@ -25,9 +26,9 @@
 body{
     width: 100%;
     height: 100%;
-    
-
 }
+
+/* ================== PRIMEIRA TELA ================== */
 
 header{
     width: 100%;
@@ -37,8 +38,8 @@ header{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
 }
+
 .box1{
     width: 100%;
     height: 30vh;
@@ -46,32 +47,32 @@ header{
     flex-direction: column;
     justify-content: start;
     align-items: center;
-  
     color: white;
 }
+
 .foto{
     width: 100%;
     height: 100%;
-     backdrop-filter: blur(2px) brightness(.5);
+    backdrop-filter: blur(2px) brightness(.5);
 }
+
 .box1 h1{
-  
     font-size: 5.4em;
 }
 
 .box1 p{
     text-transform: uppercase;
     font-size: 1.2em;
-    
 }
+
 #inkBase{
     margin-bottom: 2%;
     text-transform: none;
     font-weight: normal;
     font-size: 1.5em;
 }
+
 .box2{
-    
     width: 100%;
     height: 65vh;
     display: flex;
@@ -81,35 +82,29 @@ header{
     text-transform: uppercase;
     font-size: 3.6em;
     color: white;
-
 }
 
 .box2 p{
     font-family: var(--media);
-
 }
+
 header svg{
-    
     width: 100%;
     height: 5vh;
     color: white;
 }
 
-
-
-
+/* ================== SEGUNDA SEÇÃO ================== */
 
 #inkbox{
     width: 100%;
     height: 100%;
 }
 
-
 .foto2{
     width: 100%;
     height: 100%;
-     background: url(img/back.jpg) center / cover no-repeat;
-    
+    background: url(img/back.jpg) center / cover no-repeat;
 }
 
 .bloco{
@@ -121,16 +116,15 @@ header svg{
     justify-content: center;
     align-items: center;
     gap: 2%;
-     padding: 2%;
-     
-     backdrop-filter: blur(2px) brightness(.5);
-
+    padding: 2%;
+    backdrop-filter: blur(2px) brightness(.5);
 }
+
 a{
     text-decoration: none;
 }
-.ink{
 
+.ink{
     color: white;
     width: 100%;
     height: 50%;
@@ -139,8 +133,9 @@ a{
     margin-top: 3%;
     text-transform: uppercase;
 }
+
 .inkLab{
-     border: 1px solid var(--bege-frio);
+    border: 1px solid var(--bege-frio);
     width: 45%;
     height: 30vh;
     justify-content: space-between;
@@ -148,10 +143,12 @@ a{
     align-items: center;
     transition: .5s;
 }
+
 .inkLab:hover{
     width: 60%;
     transition: .5s;
 }
+
 .inkDrop{
     width: 55%;
     height: 25vh;
@@ -186,6 +183,7 @@ a{
     border: 1px solid var(--bege-frio);
     transition: .5s;
 }
+
 .inkBudget:hover{
     width: 80%;
     transition: .5s;
@@ -199,41 +197,37 @@ a{
     border: 1px solid var(--bege-frio);
     transition: .5s;
 }
+
 .inkSkin:hover{
-   width: 80%;
+    width: 80%;
     transition: .5s;
 }
+
+/* AULA 2: era ".ink h1" */
 .ink h2{
-    
-   
     width: 100%;
     font-size: 1.7em;
     height: 10%;
     text-align: center;
-
 }
-.ink p{
 
-  
+.ink p{
     width: 100%;
     font-size: 1.4em;
-    
     text-align: center;
 }
-#ink{
+
+/* AULA 2: era "#ink" */
+.ink p.nome{
     font-weight: normal;
     text-transform: none;
     font-family: var(--fina);
     font-size: 1.1em;
-
-
 }
 
-@media (max-width: 500px){
+/* ================== CELULAR ================== */
 
-    /* =========================
-       CONFIGURAÇÕES GERAIS
-    ========================= */
+@media (max-width: 500px){
 
     body{
         width: 100%;
@@ -242,43 +236,30 @@ a{
         text-transform: uppercase;
     }
 
-
-    /* =========================
-       PRIMEIRA TELA
-    ========================= */
+    /* ---------- primeira tela ---------- */
 
     header{
         height: 100svh;
         min-height: 650px;
-
-        background-position: center;
-         background: url(img/media2.jpg) center / cover no-repeat;
+        background: url(img/media2.jpg) center / cover no-repeat;
     }
 
     .foto{
         min-height: 100svh;
-
         backdrop-filter: blur(2px) brightness(.45);
     }
-
-
-    /* MARCA */
 
     .box1{
         height: 25vh;
         min-height: 180px;
-
         justify-content: center;
         align-items: center;
-
         padding: 2rem 1rem;
-
         text-align: center;
     }
 
     .box1 h1{
         font-size: clamp(4rem, 20vw, 6rem);
-
         line-height: .8;
         letter-spacing: -.08em;
     }
@@ -291,52 +272,34 @@ a{
     #inkBase{
         margin-top: 1.2rem;
         margin-bottom: .5rem;
-
         font-size: 1.15rem;
         letter-spacing: .05em;
     }
 
-
-    /* FRASE PRINCIPAL */
-
     .box2{
         width: 100%;
         height: 65vh;
-
-
         justify-content: center;
         align-items: flex-start;
         font-family: var(--redonda);
-       padding: 3%;
-
+        padding: 3%;
         font-size: 2.6em;
         text-align: left;
-
         line-height: 1.4;
-    
-
     }
 
     .box2 p{
         font-family: var(--media);
     }
 
-
-    /* SETA */
-
     header svg{
         width: 100%;
         height: 8vh;
-
         padding: 1rem;
-
         color: var(--bege);
     }
 
-
-    /* =========================
-       SEGUNDA SEÇÃO
-    ========================= */
+    /* ---------- segunda seção ---------- */
 
     #inkbox{
         width: 100%;
@@ -346,222 +309,134 @@ a{
     .foto2{
         width: 100%;
         min-height: 100vh;
-
-        background-position: center;
-         background: url(img/media1.jpg) center / cover no-repeat;
+        background: url(img/media1.jpg) center / cover no-repeat;
     }
 
-
-    /* =========================
-       GRID MOBILE
-    ========================= */
-
     .bloco{
-
         width: 100%;
         min-height: 100vh;
-
         display: grid;
-
         grid-template-columns: 1fr;
-
         grid-template-rows: auto;
-
         gap: .8rem;
-
         padding: 4rem 1rem;
-
         backdrop-filter: blur(2px) brightness(.5);
     }
 
-
-    /* =========================
-       TODOS OS BLOCOS
-    ========================= */
+    /* ---------- todos os blocos ---------- */
 
     .ink{
-
         width: 100% !important;
         height: auto !important;
-
         min-height: 180px;
-
         margin: 0;
-
         padding: 1.3rem;
-
         border: 1px solid var(--linha);
-
         display: flex;
-
         flex-direction: column;
-
         justify-content: center;
-
         align-items: center;
-
         position: relative;
-
         overflow: hidden;
-
         color: var(--texto);
-
         transition:
             transform .4s ease,
             background .4s ease,
             border-color .4s ease;
     }
 
-
-    /* =========================
-       POSIÇÃO DOS PROJETOS
-    ========================= */
-
     .inkDrop{
         grid-column: 1;
         grid-row: auto;
-
         min-height: 220px;
     }
 
     .inkLab{
         grid-column: 1;
         grid-row: auto;
-
         min-height: 200px;
     }
 
     .inkTalk{
         grid-column: 1;
         grid-row: auto;
-
         min-height: 180px;
     }
 
     .inkBudget{
         grid-column: 1;
         grid-row: auto;
-
         min-height: 210px;
     }
 
     .inkSkin{
         grid-column: 1;
         grid-row: auto;
-
         min-height: 180px;
     }
 
-
-    /* =========================
-       HOVER / TOQUE
-    ========================= */
-
     .ink:hover{
         width: 100% !important;
-
         transform: translateY(-4px);
-
         background: rgba(216, 204, 184, .06);
-
         border-color: var(--bege);
     }
 
-
-    /* =========================
-       TÍTULOS
-    ========================= */
-
+    /* AULA 2: era ".ink h1" */
     .ink h2{
-
         width: 100%;
         height: auto;
-
         margin: 0 0 1rem 0;
-
         font-family: var(--media);
-
         font-size: 1.45rem;
-
         font-weight: 400;
-
         letter-spacing: .04em;
-
         text-align: center;
     }
 
-
-
-    /* =========================
-       DESCRIÇÕES
-    ========================= */
-
-    .ink > p:last-child{
-
-        width: 90%;
-
-        margin: 0;
-
-        font-size: .85rem;
-
-        line-height: 1.6;
-
-        font-weight: 300;
-
-        text-align: center;
-
-    
-
-        color: var(--bege-frio);
-    }
-
-
-    /* =========================
-       SETA DO INKLAB
-    ========================= */
-
-    .inkLab svg{
-
-        width: 13px;
-        height: 13px;
-
-        margin-left: .3rem;
-
-        vertical-align: middle;
-
+    /* AULA 2: era "#ink" */
+    .ink p.nome{
+        width: 100%;
+        margin: 0 0 1rem 0;
+        font-family: var(--fina);
+        font-size: .95rem;
+        font-weight: 400;
+        letter-spacing: .08em;
         color: var(--bege);
     }
 
+    .ink > p:last-child{
+        width: 90%;
+        margin: 0;
+        font-size: .85rem;
+        line-height: 1.6;
+        font-weight: 300;
+        text-align: center;
+        color: var(--bege-frio);
+    }
 
-    /* =========================
-       LINHA ANIMADA
-    ========================= */
+    .inkLab svg{
+        width: 13px;
+        height: 13px;
+        margin-left: .3rem;
+        vertical-align: middle;
+        color: var(--bege);
+    }
 
     .ink::after{
-
         content: "";
-
         position: absolute;
-
         left: 0;
         bottom: 0;
-
         width: 0;
         height: 1px;
-
         background: var(--bege);
-
         transition: width .5s ease;
     }
 
     .ink:hover::after{
         width: 100%;
     }
-
-
-    /* =========================
-       ACESSIBILIDADE / TOQUE
-    ========================= */
 
     .ink{
         -webkit-tap-highlight-color: transparent;
@@ -570,5 +445,32 @@ a{
     .ink:active{
         transform: scale(.98);
     }
+}
 
+/* ================== AULA 2: seta e "em breve" ================== */
+
+.seta-hero{
+    display: block;
+    color: white;
+}
+
+.ink{
+    position: relative;
+}
+
+.em-breve{
+    cursor: default;
+}
+
+.selo-breve{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 2px 10px;
+    border: 1px solid var(--bege-frio);
+    border-radius: 999px;
+    font-size: .6rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--bege);
 }
