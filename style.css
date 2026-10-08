@@ -352,6 +352,47 @@ header{
     .inkSkin   { grid-column: 1 / 13; grid-row: 3; min-height: 9rem; }
 }
 
+/* ---------- 7c. ANIMAÇÕES (aula 6) ---------- */
+
+@keyframes entrar{
+    from{ opacity: 0; transform: translateY(18px); }
+    to{ opacity: 1; transform: none; }
+}
+
+@keyframes subir{
+    from{ opacity: 0; transform: translateY(28px); }
+    to{ opacity: 1; transform: none; }
+}
+
+@keyframes pular{
+    0%, 100%{ transform: translateY(0); }
+    50%{ transform: translateY(8px); }
+}
+
+/* topo: aparece quando a página abre */
+.box1{
+    animation: entrar 1s ease both;
+}
+
+.box2{
+    animation: entrar 1s .3s ease both;
+}
+
+/* seta chamando para rolar */
+.seta-hero svg{
+    animation: pular 1.8s ease-in-out infinite;
+}
+
+/* cards: escondidos só se o JavaScript estiver ativo */
+.js .revelar{
+    opacity: 0;
+}
+
+.js .revelar.visivel{
+    opacity: 1;
+    animation: subir .8s ease backwards;
+}
+
 /* ---------- 8. QUEM PREFERE MENOS MOVIMENTO ---------- */
 @media (prefers-reduced-motion: reduce){
     html{
@@ -361,5 +402,9 @@ header{
     *::before,
     *::after{
         transition-duration: .01ms !important;
+        animation: none !important;
+    }
+    .js .revelar{
+        opacity: 1;
     }
 }
