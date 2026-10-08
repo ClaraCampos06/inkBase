@@ -89,7 +89,7 @@ img{
 header{
     background:
         linear-gradient(var(--escurecer), var(--escurecer)),
-        url(img/media2.webp) center / cover no-repeat;
+        url(img/media2.jpg) center / cover no-repeat;
 }
 
 .foto{
@@ -161,7 +161,7 @@ header{
     display: flex;
     background:
         linear-gradient(var(--escurecer), var(--escurecer)),
-        url(img/media1.webp) center / cover no-repeat;
+        url(img/media1.jpg) center / cover no-repeat;
 }
 
 .bloco{
@@ -294,7 +294,7 @@ header{
     header{
         background:
             linear-gradient(var(--escurecer), var(--escurecer)),
-            url(img/pintura.webp) center / cover no-repeat;
+            url(img/pintura.jpg) center / cover no-repeat;
     }
 
     .foto{
@@ -317,7 +317,7 @@ header{
     .foto2{
         background:
             linear-gradient(var(--escurecer), var(--escurecer)),
-            url(img/back.webp) center / cover no-repeat;
+            url(img/back.jpg) center / cover no-repeat;
     }
 
     .bloco{
