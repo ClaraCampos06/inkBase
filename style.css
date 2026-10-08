@@ -16,7 +16,7 @@
 
     --linha: rgba(216, 204, 184, .35);
     --texto: #e8e0d4;
-    --escurecer: rgba(0, 0, 0, .55);
+    --escurecer: rgba(0, 0, 0, 0.411);
 
     /* fontes */
     --fina: "Cantarell", sans-serif;
