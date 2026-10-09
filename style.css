@@ -14,9 +14,9 @@
     --vinho: #67403b;
     --verde: #596458;
 
-    --linha: rgba(216, 204, 184, .35);
-    --texto: #e8e0d4;
-    --escurecer: rgba(0, 0, 0, 0.411);
+        --escurecer-topo: rgba(0, 0, 0, .55);
+    --painel: rgba(11, 10, 8, .65);
+    --painel-ativo: rgba(40, 36, 30, .75);
 
     /* fontes */
     --fina: "Cantarell", sans-serif;
@@ -29,7 +29,7 @@
     --peso-normal: 400;
 
     /* escala de texto */
-    --t-xs: .75rem;
+        --t-xs: .8rem;
     --t-sm: .9rem;
     --t-base: 1rem;
     --t-card: clamp(1.45rem, 1.2rem + 1vw, 1.8rem);
@@ -88,7 +88,7 @@ img{
 /* ---------- 3. PRIMEIRA TELA ---------- */
 header{
     background:
-        linear-gradient(var(--escurecer), var(--escurecer)),
+        linear-gradient(var(--escurecer-topo), var(--escurecer-topo)),
         url(img/media2.jpg) center / cover no-repeat;
 }
 
@@ -159,9 +159,7 @@ header{
 .foto2{
     min-height: 100vh;
     display: flex;
-    background:
-        linear-gradient(var(--escurecer), var(--escurecer)),
-        url(img/media1.jpg) center / cover no-repeat;
+    background: url(img/media1.jpg) center / cover no-repeat;
 }
 
 .bloco{
@@ -187,6 +185,7 @@ header{
     min-height: 11rem;
     padding: var(--e-3);
     border: 1px solid var(--linha);
+        background: var(--painel);
     color: var(--texto);
     text-align: center;
     text-transform: uppercase;
@@ -202,6 +201,7 @@ header{
     font-size: var(--t-card);
     font-weight: var(--peso-normal);
     letter-spacing: .04em;
+    color: white;
 }
 
 .ink p.nome{
@@ -213,7 +213,7 @@ header{
     color: var(--bege);
 }
 
-.ink > p:last-child{
+.ink > p:last-of-type{
     width: 90%;
     font-size: var(--t-desc);
     font-weight: var(--peso-leve);
@@ -245,7 +245,7 @@ header{
 @media (hover: hover){
     .ink:not(.em-breve):hover{
         transform: translateY(-4px);
-        background: rgba(216, 204, 184, .06);
+                background: var(--painel-ativo);
         border-color: var(--bege);
     }
     .ink:not(.em-breve):hover::after{
@@ -275,25 +275,33 @@ header{
     padding: 2px 10px;
     border: 1px solid var(--bege-frio);
     border-radius: 999px;
-    font-size: .6rem;
+        font-size: .7rem;
     letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--bege);
 }
+/* texto só para leitor de tela */
+.so-leitor{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
 
 /* ---------- 6b. CARD ATIVO ---------- */
-/* o inkBudget é o único que já funciona: ganha um destaque discreto */
 .inkBudget{
     border-color: var(--bege);
-    background: rgba(216, 204, 184, .05);
+    background: var(--painel-ativo);
 }
 
 /* ---------- 7. TABLET (a partir de 600px) ---------- */
 @media (min-width: 600px){
 
-    header{
+       header{
         background:
-            linear-gradient(var(--escurecer), var(--escurecer)),
+            linear-gradient(var(--escurecer-topo), var(--escurecer-topo)),
             url(img/pintura.jpg) center / cover no-repeat;
     }
 
@@ -316,7 +324,7 @@ header{
 
     .foto2{
         background:
-            linear-gradient(var(--escurecer), var(--escurecer)),
+       
             url(img/back.jpg) center / cover no-repeat;
     }
 
