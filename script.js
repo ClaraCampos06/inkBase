@@ -22,3 +22,9 @@
 
     itens.forEach(function (item) { observador.observe(item); });
 })();
+
+
+(function () {
+    var ano = document.getElementById("ano");
+    if (ano) ano.textContent = new Date().getFullYear();
+})();

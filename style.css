@@ -22,7 +22,8 @@
     --fina: "Cantarell", sans-serif;
     --media: "Average Sans", sans-serif;
     --redonda: "Noto Sans JP", sans-serif;
-
+ --linha: rgba(216, 204, 184, .35);
+    --texto: #e8e0d4;
     /* pesos */
     --peso-fino: 100;
     --peso-leve: 300;
@@ -414,5 +415,154 @@ header{
     }
     .js .revelar{
         opacity: 1;
+    }
+}
+
+
+/* ---------- 7d. RODAPÉ ---------- */
+.rodape{
+    overflow: hidden;
+    padding: var(--e-5) var(--e-2) var(--e-3);
+    background:url(img/footer.jpg) center / cover no-repeat;
+    border-top: 1px solid var(--linha);
+    color: var(--bege-frio);
+}
+
+
+.rodape-conteudo{
+    max-width: 72rem;
+    margin: 0 auto;
+    display: grid;
+    gap: var(--e-4);
+}
+
+/* marca */
+.rodape-logo{
+    font-size: clamp(6rem, 34vw, 13rem);
+    font-weight: var(--peso-fino);
+    line-height: .8;
+    letter-spacing: -.06em;
+    color:white;
+    opacity: .5;
+    user-select: none;
+}
+
+.rodape-nome{
+    margin-top: var(--e-2);
+    font-family: var(--fina);
+    font-size: 1.15rem;
+    letter-spacing: .05em;
+    color: var(--bege);
+}
+
+.rodape-frase{
+    margin-top: var(--e-1);
+    font-family: var(--fina);
+    font-size: var(--t-xs);
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--texto);
+}
+
+.rodape-manifesto{
+    margin-top: var(--e-3);
+    max-width: 28rem;
+    font-size: var(--t-sm);
+    line-height: 1.7;
+}
+
+/* lista do ecossistema */
+
+.rodape-nav{
+    border: 1px solid var(--bege-frio);
+    padding: 4% 0%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.rodape-nav h2{
+    margin-bottom: var(--e-2);
+    font-family: var(--fina);
+    font-size: var(--t-xs);
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--bege);
+}
+
+.rodape-nav ul{
+    list-style: none;
+    display: grid;
+    gap: var(--e-2);
+}
+
+.rodape-nav li{
+    font-family: var(--fina);
+    font-size: var(--t-sm);
+}
+
+.rodape-nav a{
+    color: var(--texto);
+    border-bottom: 1px solid transparent;
+    transition: color .3s, border-color .3s;
+}
+
+.rodape-nav a:hover{
+    color: #fff;
+    border-bottom-color: var(--bege);
+}
+
+.mini{
+    margin-left: .5rem;
+    padding: 1px 8px;
+    border: 1px solid var(--cinza);
+    border-radius: 999px;
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--bege-frio);
+}
+
+/* linha de baixo */
+.rodape-base{
+    max-width: 72rem;
+    margin: var(--e-4) auto 0;
+    padding-top: var(--e-2);
+    border-top: 1px solid var(--linha);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e-1) var(--e-3);
+    font-size: var(--t-xs);
+}
+
+.voltar{
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--texto);
+}
+
+.voltar:hover{
+    color: #fff;
+}
+
+.rodape a:focus-visible{
+    outline: 2px solid var(--bege);
+    outline-offset: 3px;
+}
+
+@media (min-width: 900px){
+    .rodape{
+        padding-top: 6rem;
+    }
+
+    .rodape-conteudo{
+        grid-template-columns: 1.6fr 1fr;   /* com o bloco de contato ativo, use: 1.6fr 1fr 1fr */
+        gap: var(--e-5);
+        align-items: start;
     }
 }
