@@ -101,6 +101,9 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: var(--e-4) var(--e-2) var(--e-2);
+    background:
+    linear-gradient(rgba(20, 34, 20, 0.884), rgba(249, 250, 249, 0.103)),
+    url(img/media2.jpg) center center / cover no-repeat;
 }
 
 .box1{
